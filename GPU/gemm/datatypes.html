@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Learn to code with Babak/GPU</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../index.html" class="logo"><strong>Learn to code</strong> with Babak Poursartip</a>
+									<ul class="icons">
+										<li><a href="https://github.com/babakpst" class="icon brands fa-github"><span class="label">git</span></a></li>
+										<li><a href="https://www.linkedin.com/in/poursartip/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<ul class="actions">
+											<li><a href="../../index.html" class="Homepage">Homepage</a></li>
+										</ul>
+                    <header>
+											<h1>Various datatypes in GEMM<h1>
+											<!-- Software developer, AMD -->
+										</header>
+                    <p>Review GEMM datatypes.</p>
+										<p>To convert the binary representation of a number to a decimal, we use the following formula:
+											$(-1)^{sign} \times 2^{exponent-bias} \times 1.mantisa$</p>
+										
+
+									</div>
+									<!-- <span class="image object"> -->
+										<!-- <img src="images/babak1.jpg" alt="" /> -->
+									<!-- </span> -->
+								</section>
+
+                <!-- CUDA/HIP -->
+								<section>
+									<header class="major" id="div_OOP">
+										<h2>FP64</h2>
+									</header>
+									<ul>
+										<li>mantisa: 52 bits</li>
+										<li>exponent: 11 bits</li>
+										<li>sign: 1 bit</li>
+										<li>bias: 1023</li>
+										<li>range: 2^-1022 to 2^1023</li>
+										<li>precision: 15-17 decimal digits</li>
+										<li>size: 8 bytes</li>
+										<li>usage: scientific computing</li>
+										<li>largest positive value: 1.7976931348623157e+308</li>
+										<li>largest negative value: -1.7976931348623157e+308</li>
+										<li>smallest positive value: 2.2250738585072014e-308</li>
+										<li>smallest negative value: -2.2250738585072014e-308</li>
+										<li>machine epsilon: 2.2204460492503131e-16</li>
+										<li>smallest denormalized value: 4.9406564584124654e-324</li>
+										<li>largest denormalized value: 2.2250738585072014e-308</li>
+									</ul>
+									<header class="major" id="div_OOP">
+										<h2>FP32</h2>
+									</header>
+									<ul>
+										<li>mantisa: 23 bits</li>
+										<li>exponent: 8 bits (ranges form 0~255, but 0 is reserved for NaN, and 255 is reserved for NaN)</li>
+										<li>sign: 1 bit</li>
+										<li>bias: 127</li>
+										<li>nan: 0 exponent</li>
+										<li>+inf: </li>
+										<li>-inf: </li>
+										<li>subnormal/denorms: </li>
+										<li>range: 2^-126 to 2^127</li>	
+										<li>precision: 6-9 decimal digits</li>
+										<li>size: 4 bytes</li>
+										<li>usage: scientific computing</li>
+										<li>largest positive value: 3.4028235e+38</li>
+										<li>largest negative value: -3.4028235e+38</li>
+										<li>smallest positive value: 1.1754944e-38</li>
+										<li>smallest negative value: -1.1754944e-38</li>
+										<li>machine epsilon: 1.1920929e-07</li>
+										<li>smallest denormalized value: 1.4012985e-45</li>
+										<li>largest denormalized value: 1.1754944e-38</li>
+									</ul>
+									<header class="major" id="div_OOP">
+										<h2>F16</h2>
+									</header>
+									<ul>
+										<li>mantisa: 10 bits</li>
+										<li>exponent: 5 bits</li>
+										<li>sign: 1 bit</li>
+										<li>bias: 15</li>
+										<li>range: 2^-14 to 2^15</li>
+										<li>precision: 3-4 decimal digits</li>
+										<li>size: 2 bytes</li>
+										<li>usage: ML</li>
+										<li>largest positive value: 65504</li>
+										<li>largest negative value: -65504</li>
+										<li>smallest positive value: 6.1035e-5</li>
+										<li>smallest negative value: -6.1035e-5</li>
+										<li>machine epsilon: 9.77e-4</li>
+										<li>smallest denormalized value: 5.96e-8</li>
+										<li>largest denormalized value: 6.1035e-5</li>
+									</ul>
+									<header class="major" id="div_OOP">
+										<h2>BF16</h2>
+									</header>
+									<ul>
+										<li>mantisa: 7 bits</li>
+										<li>exponent: 8 bits</li>
+										<li>sign: 1 bit</li>
+										<li>bias: 127</li>
+										<li>range: 2^-126 to 2^127</li>
+										<li>precision: 2-3 decimal digits</li>
+										<li>size: 2 bytes</li>
+										<li>usage: ML</li>
+										<li>largest positive value: 3.38953139e+38</li>
+										<li>largest negative value: -3.38953139e+38</li>
+										<li>smallest positive value: 1.168e-38</li>
+										<li>smallest negative value: -1.168e-38</li>
+										<li>machine epsilon: 1.168e-07</li>
+										<li>smallest denormalized value: 1.4012985e-45</li>
+										<li>largest denormalized value: 1.168e-38</li>
+									</ul>
+									<header class="major" id="div_OOP">
+										<h2>FP8: E4M3</h2>
+									</header>
+									<ul>
+										<li>mantisa: 3 bits</li>
+										<li>exponent: 4 bits</li>
+										<li>sign: 1 bit</li>
+										<li>bias: 7</li>
+										<li>range: 2^-6 to 2^7</li>
+										<li>precision: 1-2 decimal digits</li>
+										<li>size: 1 byte</li>
+										<li>usage: ML</li>
+										<li>largest positive value: 15</li>
+										<li>largest negative value: -15</li>
+										<li>smallest positive value: 0.0625</li>
+										<li>smallest negative value: -0.0625</li>
+										<li>machine epsilon: 0.125</li>
+										<li>smallest denormalized value: 0.0625</li>
+										<li>largest denormalized value: 0.125</li>
+									</ul>
+									<header class="major" id="div_OOP">
+										<h2>FP8: E5M2</h2>
+									</header>
+									<ul>
+										<li>mantisa: 2 bits</li>
+										<li>exponent: 5 bits</li>
+										<li>sign: 1 bit</li>
+										<li>bias: 15</li>
+										<li>range: 2^-14 to 2^15</li>
+										<li>precision: 1-2 decimal digits</li>
+										<li>size: 1 byte</li>
+										<li>usage: ML</li>
+										<li>largest positive value: 31</li>
+										<li>largest negative value: -31</li>
+										<li>smallest positive value: 0.03125</li>
+										<li>smallest negative value: -0.03125</li>
+										<li>machine epsilon: 0.0625</li>
+										<li>smallest denormalized value: 0.03125</li>
+										<li>largest denormalized value: 0.0625</li>
+
+
+
+
+
+
+							
+							</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<!-- <li><a href="index">Homepage</a></li> -->
+										<li><a href="cpp.html">C++ programming</a></li>
+										<li><a href="hpc.html">Parallel/multithreaded programming</a></li>
+										<li><a href="tools.html">Tools</a></li>
+										<li>
+											<span class="opener"><a href="gpu.html"></a>GPU programming</span>
+											<ul>
+												<li><a href="#">code #1</a></li>
+												<li><a href="#">code #2</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Get in touch</h2>
+								</header>
+								<!-- <p>Contact Info.</p> -->
+								<ul class="contact">
+									<li class="icon solid fa-envelope"><a href="#">babakpst@gmail.com</a></li>
+									<!-- <li class="icon solid fa-phone">(000) 000-0000</li> -->
+									<li class="icon solid fa-home">Austin, TX</li>
+								</ul>
+							</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>content 1</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="../images/pic07.jpg" alt="" /></a>
+											<p>later.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="../images/pic09.jpg" alt="" /></a>
+											<p>later.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

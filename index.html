@@ -1,3 +1,7 @@
+<!-- add icons to each item -->
+<!-- add algorithm section -->
+
+
 <!DOCTYPE HTML>
 <!--
 	Editorial by HTML5 UP
@@ -43,7 +47,7 @@
 										</header>
 										<p> I am a software developer, working as a team lead at AMD. I graduated from UT Austin with a PhD degree in computational methods. I share some coding samples here. Please message me if you have any questions.</p>
 										<ul class="actions">
-											<li><a href="me.html" class="button big">Learn More About Me</a></li>
+											<li><a href="bio.html" class="button big">Learn More About Me</a></li>
 										</ul>
 									</div>
 									<span class="image object">
@@ -54,87 +58,57 @@
 							<!-- C++ programming section -->
 								<section>
 									<header class="major">
-										<h2><a href="cpp.html">C++ programming</a></h2>
+										<h2><a href="cpp/cpp.html">C++ programming</a></h2>										
 									</header>
 									<div class="features">
 										<article>
-											<span class="icon fa-gem"></span>
+											<!-- <span class="icon fa-gem"></span> -->
 											<div class="content">
-												<h3>OOP</h3>
+												<h3><a href="cpp/cpp.html#div_OOP">OOP</a></h3>
 												<!-- <p>How to write OOP.</p> -->
 											</div>
 										</article>
 										<article>
-											<span class="icon solid fa-paper-plane"></span>
+											<!-- <span class="icon solid fa-paper-plane"></span> -->
 											<div class="content">
-												<h3>template programming</h3>
-												<p>Code for performance.</p>
+												<h3><a href="cpp/cpp.html#div_tmpl">template programming</a></h3>
+												<!-- <p>Code for performance.</p> -->
 											</div>
 										</article>
 										<article>
-											<span class="icon solid fa-rocket"></span>
+											<!-- <span class="icon solid fa-rocket"></span> -->
 											<div class="content">
-												<h3>smart pointers</h3>
-												<p>use the latest C++ features.</p>
+												<h3><a href="cpp/cpp.html#div_smart">smart pointers</a></h3>
+												<!-- <p>use the latest C++ features.</p> -->
 											</div>
 										</article>
 										<article>
-											<span class="icon solid fa-signal"></span>
+											<!-- <span class="icon solid fa-signal"></span> -->
 											<div class="content">
-												<h3>numerical methods</h3>
-												<p>Use libraries.</p>
+												<h3><a href="cpp/cpp.html#div_smart">numerical methods</a></h3>
+												<!-- <p>Use libraries.</p> -->
 											</div>
 										</article>
 									</div>
 								</section>
 
-							<!-- Section -->
+							<!-- GPU programming -->
               <section>
                 <header class="major">
-                  <h2>Parallel programming</h2>
+                  <h2><a href="GPU/gpu.html">GPU programming</a></h2>
                 </header>
                 <div class="features">
                   <article>
-                    <span class="icon fa-gem"></span>
+                    <!-- <span class="icon fa-gem"></span> -->
                     <div class="content">
-                      <h3>OpenMP</h3>
-                      <!-- <p>How to write OpenMP.</p> -->
-                    </div>
-                  </article>
-                  <article>
-                    <span class="icon solid fa-paper-plane"></span>
-                    <div class="content">
-                      <h3>MPI</h3>
-                      <!-- <p>Code for performance.</p> -->
-                    </div>
-                  </article>
-                  <article>
-                    <span class="icon solid fa-rocket"></span>
-                    <div class="content">
-                      <h3>PETSc</h3>
-                      <!-- <p>throughput programming.</p> -->
-                    </div>
-                  </article>
-                </div>
-              </section>
-
-							<!-- Section -->
-              <section>
-                <header class="major">
-                  <h2>GPU programming</h2>
-                </header>
-                <div class="features">
-                  <article>
-                    <span class="icon fa-gem"></span>
-                    <div class="content">
-                      <h3>CUDA/HIP</h3>
+                      <h3><a href="GPU/cuda/cuda.html#div_tmpl">CUDA/HIP</a></h3>
                       <!-- <p></p> -->
                     </div>
                   </article>
                   <article>
-                    <span class="icon solid fa-paper-plane"></span>
+                    <!-- <span class="icon solid fa-paper-plane"></span> -->
                     <div class="content">
-                      <h3>GEMM</h3>
+                      <h3><a href="GPU/gemm/dataype.html#div_tmpl">GEMM</a></h3>
                       <!-- <p></p> -->
                     </div>
                   </article>
@@ -298,91 +272,136 @@
                 </div>
               </section>
 
+							<!-- Parallel programming section -->
+              <section>
+                <header class="major">
+                  <h2><a href="hpc/hpc.html">Parallel programming</a></h2>
+                </header>
+                <div class="features">
+                  <article>
+                    <!-- <span class="icon fa-gem"></span> -->
+                    <div class="content">
+                      <h3><a href="hpc/hpc.html#div_omp">OpenMP</a></h3>
+                      <!-- <p>How to write OpenMP.</p> -->
+                    </div>
+                  </article>
+                  <article>
+                    <!-- <span class="icon solid fa-paper-plane"></span> -->
+                    <div class="content">
+                      <h3><a href="hpc/hpc.html#div_mpi">MPI</a></h3>
+                      <!-- <p>Code for performance.</p> -->
+                    </div>
+                  </article>
+                  <article>
+                    <!-- <span class="icon solid fa-rocket"></span> -->
+                    <div class="content">
+                      <h3>PETSc</h3>
+                      <!-- <p>throughput programming.</p> -->
+                    </div>
+                  </article>
+                </div>
+              </section>
+
+
 						</div>
 					</div>
+					
+					
 
-
-
+				<!-- INCLUDE ==================  -->
+				<div w3-include-html="sidebar.html"></div>	
+				<!-- <include src="./sidebar.html"></include> -->
+				<!-- <link href="sidebar.html" rel="import" /> -->
+				<!--
+				<script> 
+					$(function(){
+						$("#includedContent").load("sidebar.html"); 
+					});
+					</script> 
+				-->
 				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+        <div id="sidebar">
+          <div class="inner">
 
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
+            <!-- Search -->
+            <section id="search" class="alt">
+              <form method="post" action="#">
+                <input type="text" name="query" id="query" placeholder="Search" />
+              </form>
+            </section>
 
-							<!-- Menu -->
-							<nav id="menu">
-								<header class="major">
-									<h2>Menu</h2>
-								</header>
-								<ul>
-									<li><a href="index.html">Homepage</a></li>
-									<!-- <li><a href="index">Homepage</a></li> -->
-									<li><a href="cpp.html">C++ programming</a></li>
-									<li><a href="hpc.html">Parallel programming</a></li>
-									<li>
-										<span class="opener"><a href="gpu.html"></a>GPU programming</span>
-										<ul>
-											<li><a href="gpu.html">cuda/hip</a></li>
-											<li><a href="gemm.html">GEMM</a></li>
-										</ul>
-									</li>
-									<li><a href="ml.html">ML</a></li>
-									<li><a href="python.html">python</a></li>
-									<li><a href="tools.html">Tools</a></li>
+             
+            <!-- Menu -->
+            <nav id="menu">
+              <header class="major">
+                <h2>Menu</h2>
+              </header>
+              <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <!-- <li><a href="index">Homepage</a></li> -->
+                <li><a href="cpp.html">C++ programming</a></li>
+                <li><a href="hpc.html">Parallel programming</a></li>
+                <!-- <li>
+                  <span class="opener"><a href="gpu.html"></a>GPU programming</span>
+                  <ul>
+                    <li><a href="gpu.html">cuda/hip</a></li>
+                    <li><a href="gemm.html">GEMM</a></li>
+                  </ul>
+                </li> -->
+                <li><a href="gpu.html">GPU programming</a></li>
+                <li><a href="ml.html">ML</a></li>
+                <li><a href="python.html">python</a></li>
+                <li><a href="tools.html">Tools</a></li>
 
-								</ul>
-							</nav>
+              </ul>
+            </nav>
 
-							<!-- Section -->
-							<section>
-								<header class="major">
-									<h2>Get in touch</h2>
-								</header>
-								<!-- <p>Contact Info.</p> -->
-								<ul class="contact">
-									<li class="icon solid fa-envelope"><a>babakpst@gmail.com</a></li>
-									<!-- <li class="icon solid fa-phone">(000) 000-0000</li> -->
-									<!-- <li class="icon solid fa-home">Austin, TX</li> -->
-									<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/poursartip/">LinkedIn</a></li>
-								</ul>
-							</section>
+            <!-- Section -->
+            <section>
+              <header class="major">
+                <h2>Get in touch</h2>
+              </header>
+              <!-- <p>Contact Info.</p> -->
+              <ul class="contact">
+                <li class="icon solid fa-envelope"><a>babakpst@gmail.com</a></li>
+                <!-- <li class="icon solid fa-phone">(000) 000-0000</li> -->
+                <!-- <li class="icon solid fa-home">Austin, TX</li> -->
+                <li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/poursartip/">LinkedIn</a></li>
+              </ul>
+            </section>
 
-							<!-- Section -->
-								<!-- <section>
-									<header class="major">
-										<h2>content 1</h2>
-									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<p>later.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>later.</p>
-										</article>
-									</div>
-									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
-									</ul>
-								</section> -->
+            <!-- Section -->
+              <!-- <section>
+                <header class="major">
+                  <h2>content 1</h2>
+                </header>
+                <div class="mini-posts">
+                  <article>
+                    <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+                    <p>later.</p>
+                  </article>
+                  <article>
+                    <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+                    <p>later.</p>
+                  </article>
+                </div>
+                <ul class="actions">
+                  <li><a href="#" class="button">More</a></li>
+                </ul>
+              </section> -->
 
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
-
-						</div>
-					</div>
+            <!-- Footer -->
+            <footer id="footer">
+              <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            </footer>
+            
+          </div>
+        </div>
+				<!-- INCLUDE ^^^^^^^^^^^^  -->
 
 			</div>
 
-		<!-- Scripts -->
+		  <!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
