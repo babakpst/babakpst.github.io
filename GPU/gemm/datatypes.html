@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Learn to code with Babak/GPU</title>
+		<title>Learn to code with Babak/GPU/datatypes</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../../../assets/css/main.css" />
@@ -57,13 +57,12 @@
 									</header>
 									<ul>
 										<li>mantisa: 52 bits</li>
-										<li>exponent: 11 bits</li>
+										<li>exponent: 11 bits (holds 0~2047, but exponent ranges form 1~2046, but 0 is reserved for denorms and zero, and 2047 is reserved for NaN and infinity)</li>
 										<li>sign: 1 bit</li>
 										<li>bias: 1023</li>
 										<li>range: 2^-1022 to 2^1023</li>
 										<li>precision: 15-17 decimal digits</li>
 										<li>size: 8 bytes</li>
-										<li>usage: scientific computing</li>
 										<li>largest positive value: 1.7976931348623157e+308</li>
 										<li>largest negative value: -1.7976931348623157e+308</li>
 										<li>smallest positive value: 2.2250738585072014e-308</li>
@@ -77,23 +76,18 @@
 									</header>
 									<ul>
 										<li>mantisa: 23 bits</li>
-										<li>exponent: 8 bits (ranges form 0~255, but 0 is reserved for NaN, and 255 is reserved for NaN)</li>
+										<li>exponent: 8 bits (holds 0~255, but exponent ranges form 1~254, but 0 is reserved for denorms and zero, and 255 is reserved for NaN and infinity)</li>
 										<li>sign: 1 bit</li>
 										<li>bias: 127</li>
-										<li>nan: 0 exponent</li>
-										<li>+inf: </li>
-										<li>-inf: </li>
-										<li>subnormal/denorms: </li>
 										<li>range: 2^-126 to 2^127</li>	
 										<li>precision: 6-9 decimal digits</li>
 										<li>size: 4 bytes</li>
-										<li>usage: scientific computing</li>
 										<li>largest positive value: 3.4028235e+38</li>
 										<li>largest negative value: -3.4028235e+38</li>
-										<li>smallest positive value: 1.1754944e-38</li>
-										<li>smallest negative value: -1.1754944e-38</li>
+										<li>smallest positive value: 1.1754944e-38 (2^-126)</li>
+										<li>smallest negative value: -1.1754944e-38 (-2^-126)</li>
 										<li>machine epsilon: 1.1920929e-07</li>
-										<li>smallest denormalized value: 1.4012985e-45</li>
+										<li>smallest denormalized value: 1.4012985e-45 (2^-(126+23))</li>
 										<li>largest denormalized value: 1.1754944e-38</li>
 									</ul>
 									<header class="major" id="div_OOP">
@@ -101,13 +95,12 @@
 									</header>
 									<ul>
 										<li>mantisa: 10 bits</li>
-										<li>exponent: 5 bits</li>
+										<li>exponent: 5 bits (holds 0~31, but exponent ranges form 1~30, but 0 is reserved for denorms and zero, and 31 is reserved for NaN and infinity)</li>
 										<li>sign: 1 bit</li>
 										<li>bias: 15</li>
 										<li>range: 2^-14 to 2^15</li>
 										<li>precision: 3-4 decimal digits</li>
 										<li>size: 2 bytes</li>
-										<li>usage: ML</li>
 										<li>largest positive value: 65504</li>
 										<li>largest negative value: -65504</li>
 										<li>smallest positive value: 6.1035e-5</li>
@@ -121,13 +114,12 @@
 									</header>
 									<ul>
 										<li>mantisa: 7 bits</li>
-										<li>exponent: 8 bits</li>
+										<li>exponent: 8 bits (holds 0~255, but exponent ranges form 1~254, but 0 is reserved for denorms and zero, and 255 is reserved for NaN and infinity)</li>
 										<li>sign: 1 bit</li>
 										<li>bias: 127</li>
 										<li>range: 2^-126 to 2^127</li>
 										<li>precision: 2-3 decimal digits</li>
 										<li>size: 2 bytes</li>
-										<li>usage: ML</li>
 										<li>largest positive value: 3.38953139e+38</li>
 										<li>largest negative value: -3.38953139e+38</li>
 										<li>smallest positive value: 1.168e-38</li>
@@ -137,7 +129,7 @@
 										<li>largest denormalized value: 1.168e-38</li>
 									</ul>
 									<header class="major" id="div_OOP">
-										<h2>FP8: E4M3</h2>
+										<h2>NANOO FP8: E4M3</h2>
 									</header>
 									<ul>
 										<li>mantisa: 3 bits</li>
@@ -147,9 +139,8 @@
 										<li>range: 2^-6 to 2^7</li>
 										<li>precision: 1-2 decimal digits</li>
 										<li>size: 1 byte</li>
-										<li>usage: ML</li>
-										<li>largest positive value: 15</li>
-										<li>largest negative value: -15</li>
+										<li>largest positive value: 240</li>
+										<li>largest negative value: -240</li>
 										<li>smallest positive value: 0.0625</li>
 										<li>smallest negative value: -0.0625</li>
 										<li>machine epsilon: 0.125</li>
@@ -157,7 +148,7 @@
 										<li>largest denormalized value: 0.125</li>
 									</ul>
 									<header class="major" id="div_OOP">
-										<h2>FP8: E5M2</h2>
+										<h2>NANOO FP8: E5M2</h2>
 									</header>
 									<ul>
 										<li>mantisa: 2 bits</li>
@@ -167,7 +158,6 @@
 										<li>range: 2^-14 to 2^15</li>
 										<li>precision: 1-2 decimal digits</li>
 										<li>size: 1 byte</li>
-										<li>usage: ML</li>
 										<li>largest positive value: 31</li>
 										<li>largest negative value: -31</li>
 										<li>smallest positive value: 0.03125</li>
@@ -175,13 +165,45 @@
 										<li>machine epsilon: 0.0625</li>
 										<li>smallest denormalized value: 0.03125</li>
 										<li>largest denormalized value: 0.0625</li>
+									</ul>
+									<header class="major" id="div_OOP">
+										<h2>Special case binary representations</h2>
+									</header>									
+									<ul>
+										<li>Zero: 0/1 sign bit for positive or negative zero, exponent and mantisa are all 0</li>
+										<li>NaN (Not a Number): all exponent bits are 1, and mantisa is non zero, sign bit can be 0 or 1. The most significant bit from x is used to determine the type of NaN: "quiet NaN" or "signaling NaN" </li> 
+										<li>+/-inf:  all exponent bits are 1, and mantisa is zero. 0/1 sign bit for positive and negative infinity</li>
+										<li>subnormal/denorms: 
+											<p>Normalized numbers have the implicit leading binary digit is a 1. To reduce the loss of precision when an underflow occurs, IEEE 754 includes the ability to represent fractions smaller than are possible in the normalized representation, by making the implicit leading digit a 0. Such numbers are called denormal/subnormal. They don't include as many significant digits as a normalized number, but they enable a gradual loss of precision when the result of an operation is not exactly zero but is too close to zero to be represented by a normalized number.</p>
+											<p>A denormal number is represented with a biased exponent of all 0 bits, which represents, for example, an exponent of -126 in single precision (not -127), or -1022 in double precision (not -1023). In contrast, the smallest biased exponent representing a normal number is 1.</p>
+  									</li>
+									</ul>
 
-
-
-
-
-
-							
+									<header class="major" id="div_OOP">
+										<h2>Operations generating NaN</h2>
+									</header>
+									<p>	There are three kinds of operations that can return NaN:</p>
+									<ul>
+										<li>Operations with a NaN operand.</li>
+										<li>Indeterminate forms:</li>
+										<ul>
+											<li>The divisions (±0) / (±0) and (±∞) / (±∞).</li>
+											<li>The multiplications (±0) × (±∞) and (±∞) × (±0).</li>
+											<li>Remainder x % y when x is an infinity or y is zero.</li>
+											<li>The additions (+∞) + (−∞), (−∞) + (+∞) and equivalent subtractions (+∞) − (+∞) and (−∞) − (−∞).</li>
+							        <li>The standard has alternative functions for powers:</li>
+											<ul>
+												<li>The standard pow function and the integer exponent pown function define 00, 1∞, and ∞0 as 1.</li>
+												<li>The powr function defines all three indeterminate forms as invalid operations and so returns NaN.</li>
+											</ul>
+										</ul>
+										<li>Real operations with complex results, for example:</li>
+										<ul>
+											<li>The square root of a negative number.</li>
+											<li>The logarithm of a negative number.</li>
+											<li>The inverse sine or inverse cosine of a number that is less than -1 or greater than 1.</li>
+										</ul>
+									</ul>
 							</section>
 
 						</div>
@@ -233,25 +255,6 @@
 							</section>
 
 							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>content 1</h2>
-									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="../images/pic07.jpg" alt="" /></a>
-											<p>later.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="../images/pic09.jpg" alt="" /></a>
-											<p>later.</p>
-										</article>
-									</div>
-									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
-									</ul>
-								</section>
-
 							<!-- Footer -->
 								<footer id="footer">
 									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
